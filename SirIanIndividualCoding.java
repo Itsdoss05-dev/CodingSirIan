@@ -8,7 +8,7 @@ public class SirIanIndividualCoding {
         Scanner s = new Scanner(System.in);
 
 
-        System.out.println("=== EMPLOYEE CREATION ===");
+        System.out.println(" EMPLOYEE CREATION !!");
 
         System.out.print("Enter Employee ID: ");
         Integer empId = s.nextInt();
@@ -21,7 +21,7 @@ public class SirIanIndividualCoding {
         Double empSalary = s.nextDouble();
 
         Employee employee = new Employee(empId, empName, empSalary);
-
+        System.out.println("----------------------------------------------");
         System.out.println("\nEmployee Created:");
         System.out.println("ID: " + employee.getEmployeeId());
         System.out.println("Name: " + employee.getEmployeeName());
@@ -41,9 +41,9 @@ public class SirIanIndividualCoding {
 
       
         System.out.println("Employee Short Info: " + employee.getShortInfo());
-
-        System.out.println("\n=== CAR CREATION ===");
-        s.nextLine(); // clear buffer
+        System.out.println("----------------------------------------------");
+        System.out.println("CAR CREATION !!");
+        s.nextLine(); 
 
         System.out.print("Enter Company Name: ");
         String company = s.nextLine();
@@ -79,3 +79,4 @@ public class SirIanIndividualCoding {
         s.close();
     }
 }
+
