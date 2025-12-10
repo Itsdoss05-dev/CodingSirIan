@@ -1,9 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package sirianindividualcoding;
-
 
 import java.util.Scanner;
 
@@ -12,7 +7,8 @@ public class SirIanIndividualCoding {
 
         Scanner s = new Scanner(System.in);
 
-        System.out.println("Emloyee Creation;");
+
+        System.out.println("=== EMPLOYEE CREATION ===");
 
         System.out.print("Enter Employee ID: ");
         Integer empId = s.nextInt();
@@ -26,14 +22,28 @@ public class SirIanIndividualCoding {
 
         Employee employee = new Employee(empId, empName, empSalary);
 
-        System.out.println("Employee Created:");
+        System.out.println("\nEmployee Created:");
         System.out.println("ID: " + employee.getEmployeeId());
         System.out.println("Name: " + employee.getEmployeeName());
         System.out.println("Salary: " + employee.getEmployeeSalary());
-        
-        System.out.println(" ");
-        System.out.println("CAR CREATION;");
-        s.nextLine();
+
+   
+        System.out.println("Salary Level: " + employee.getSalaryLevel());
+
+       
+        System.out.print("Enter salary increase percentage: ");
+        Double increasePercent = s.nextDouble();
+        employee.increaseSalary(increasePercent);
+        System.out.println("New Salary after increase: " + employee.getEmployeeSalary());
+
+      
+        System.out.println("Is employee taxable? " + employee.isTaxable());
+
+      
+        System.out.println("Employee Short Info: " + employee.getShortInfo());
+
+        System.out.println("\n=== CAR CREATION ===");
+        s.nextLine(); // clear buffer
 
         System.out.print("Enter Company Name: ");
         String company = s.nextLine();
@@ -48,14 +58,24 @@ public class SirIanIndividualCoding {
         Double mileage = s.nextDouble();
 
         Car car = new Car(company, model, year, mileage);
-         System.out.println(" ");
-        System.out.println("Car Created:");
+
+        System.out.println("\nCar Created:");
         System.out.println("Company: " + car.getCompanyName());
         System.out.println("Model: " + car.getModelName());
         System.out.println("Year: " + car.getYear());
-        System.out.println("Total distance traveled: " + car.getMileage());
+        System.out.println("Mileage: " + car.getMileage());
+
+
+        System.out.println("Car Age: " + car.getCarAge() + " years");
+
+        System.out.println("Mileage Category: " + car.getMileageCategory());
+
+       
+        System.out.println("Is Classic Car? " + car.isClassic());
+
+        
+        System.out.println("Full Car Description: " + car.getFullDescription());
 
         s.close();
     }
 }
-
