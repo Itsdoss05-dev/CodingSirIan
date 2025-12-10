@@ -47,3 +47,11 @@ public class Employee {
         else if (employee_salary <= 50000) return "Medium";
         else return "High";
 }
+
+    public void increaseSalary(Double percentage) {
+    if (percentage > 0) {
+        employee_salary += employee_salary * (percentage / 100);
+    }
+}
+
+
