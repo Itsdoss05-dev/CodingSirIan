@@ -6,7 +6,7 @@ package sirianindividualcoding;
 
 /**
  *
- * @author Uzuki
+ * @author uzuki
  */
 public class Employee {
 
@@ -39,4 +39,11 @@ public class Employee {
     public String getEmployeeSalary() {
         return String.format("₱%,.2f", employee_salary);
     }
+}
+
+
+    public String getSalaryLevel() {
+        if (employee_salary < 20000) return "Low";
+        else if (employee_salary <= 50000) return "Medium";
+        else return "High";
 }
