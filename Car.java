@@ -50,3 +50,7 @@ public class Car {
         return mileage;
     }
 }
+
+    public boolean isClassic() {
+        return getCarAge() > 30;
+}
