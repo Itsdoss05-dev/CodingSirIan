@@ -36,9 +36,9 @@ public class Employee {
         this.employee_name = employee_name;
     }
 
-    public String getEmployeeSalary() {
-        return String.format("₱%,.2f", employee_salary);
-    }
+   public String getEmployeeSalary() {
+    return "P" + String.format("%.2f", employee_salary);
+}
 }
 
 
@@ -57,4 +57,5 @@ public class Employee {
 public boolean isTaxable() {
     return employee_salary > 25000;
 }
+
 
