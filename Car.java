@@ -54,3 +54,9 @@ public class Car {
     public boolean isClassic() {
         return getCarAge() > 30;
 }
+   public String getFullDescription() {
+        return company_name + " " + model_name + " (" + year + "), Mileage: " + mileage +
+               ", Age: " + getCarAge() + " years, Mileage Category: " + getMileageCategory() +
+               (isClassic() ? " [Classic Car]" : "");
+    }
+
