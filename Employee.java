@@ -54,4 +54,7 @@ public class Employee {
     }
 }
 
+public boolean isTaxable() {
+    return employee_salary > 25000;
+}
 
