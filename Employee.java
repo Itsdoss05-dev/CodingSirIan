@@ -52,10 +52,13 @@ public class Employee {
     if (percentage > 0) {
         employee_salary += employee_salary * (percentage / 100);
     }
+
+    public boolean isTaxable() {
+    return employee_salary > 25000;
 }
 
-public boolean isTaxable() {
-    return employee_salary > 25000;
+    public String getShortInfo() {
+    return employee_name + " (" + getEmployeeSalary() + ")";
 }
 
 
