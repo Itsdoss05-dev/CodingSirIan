@@ -60,3 +60,9 @@ public class Car {
                (isClassic() ? " [Classic Car]" : "");
     }
 
+   public String getMileageCategory() {
+    if (mileage < 10000) return "Low";
+    else if (mileage <= 50000) return "Medium";
+    else return "High";
+   }
+
