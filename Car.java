@@ -66,3 +66,6 @@ public class Car {
     else return "High";
    }
 
+   public Integer getCarAge() {
+       return Year.now().getValue() - year; 
+   }
